@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zethera (QZR)</title>
     <style>
         body {
@@ -14,15 +14,27 @@
         header {
             background: linear-gradient(to right, #2c3e50, #34495e);
             color: white;
-            text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        header h1 {
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+        .header-text {
+            max-width: 800px;
+            text-align: center;
+        }
+        .header-text h1 {
             font-size: 63px;
             margin-bottom: 10px;
             color: #ffffff;
         }
-        header p {
+        .header-text p {
             font-size: 27px;
             line-height: 1.6;
             color: #ffffff;
@@ -33,28 +45,15 @@
             margin: auto;
             background: #dee6ec;
         }
-        h1, h2 {
-            color: #1c2b3a;
-        }
         section p {
-            font-size: 17.25px;
-            line-height: 2; /* espaçamento aumentado */
-            text-align: justify; /* alinhamento justificado */
-        }
-        .flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
-        .block {
-            flex: 1;
-            min-width: 300px;
-        }
-        .block p {
-            font-size: 17.25px;
+            font-size: 18.1px;
             line-height: 2;
             text-align: justify;
+            margin-bottom: 24px;
+        }
+        h2 {
+            color: #1c2b3a;
+            margin-top: 40px;
         }
         footer {
             text-align: center;
@@ -68,33 +67,29 @@
 <body>
 
 <header>
-    <h1>Zethera (QZR)</h1>
-    <p>
-        É uma criptomoeda criada na Binance Smart Chain (BEP-20), com<br>
-        foco em acessibilidade popular, visão de longo prazo e controle<br>
-        gradual de distribuição.
-    </p>
+    <img src="https://raw.githubusercontent.com/Zethera/Zethera-QZR/main/Borboleta-Morpho-Transparente-Reduzida.png" alt="Logo Zethera" class="logo">
+    <div class="header-text">
+        <h1>Zethera (QZR)</h1>
+        <p>
+            É uma criptomoeda criada na Binance Smart Chain (BEP-20), com<br>
+            foco em acessibilidade popular, visão de longo prazo e controle<br>
+            gradual de distribuição.
+        </p>
+    </div>
 </header>
 
 <section>
     <h2>Sobre a Zethera</h2>
-    <p><strong>Zethera</strong> é uma rara espécie de borboleta asiática, símbolo de transformação silenciosa, leveza e resistência. Seu voo delicado esconde uma jornada de superação. Assim como ela, o projeto nasce de forma simples, mas com estrutura forte e planejada para resistir ao tempo, à especulação e aos ciclos do mercado.</p>
-</section>
+    <p>Zethera é uma rara espécie de borboleta asiática, símbolo de transformação silenciosa, leveza e resistência. Seu voo delicado esconde uma jornada de superação. Assim como ela, o projeto nasce de forma simples, mas com estrutura forte e planejada para resistir ao tempo, à especulação e aos ciclos do mercado.</p>
 
-<section class="flex">
-    <div class="block">
-        <h2>Contrato Inteligente – Segurança e Transparência</h2>
-        <p>A Zethera (QZR) foi desenvolvida na <strong>Binance Smart Chain (BEP-20)</strong>, com código auditável e práticas avançadas de segurança.</p>
-        <p>O contrato segue padrões internacionais, incluindo funcionalidades como <strong>controle de liquidez</strong>, <strong>pausa de emergência</strong> e <strong>compatibilidade com carteiras populares</strong>.</p>
-    </div>
-    <div class="block">
-        <h2>Tokenomics – Estrutura Econômica da Zethera</h2>
-        <p>A Zethera (QZR) possui um modelo econômico pensado para garantir estabilidade, segurança e crescimento sustentável.</p>
-        <p>O fornecimento total é limitado, com distribuição estratégica entre liquidez, desenvolvimento, incentivos e reserva de longo prazo.</p>
-    </div>
-</section>
+    <h2>Contrato Inteligente – Segurança e Transparência</h2>
+    <p>A Zethera (QZR) foi desenvolvida na Binance Smart Chain (BEP-20), com código auditável e práticas avançadas de segurança.</p>
+    <p>O contrato segue padrões internacionais, incluindo funcionalidades como controle de liquidez, pausa de emergência e compatibilidade com carteiras populares.</p>
 
-<section>
+    <h2>Tokenomics – Estrutura Econômica da Zethera</h2>
+    <p>A Zethera (QZR) possui um modelo econômico pensado para garantir estabilidade, segurança e crescimento sustentável.</p>
+    <p>O fornecimento total é limitado, com distribuição estratégica entre liquidez, desenvolvimento, incentivos e reserva de longo prazo.</p>
+
     <h2>Visão e Propósito</h2>
     <p>Zethera nasce como uma iniciativa independente, com base na descentralização e na inovação acessível. Nosso propósito é unir a estética, o simbolismo e a tecnologia para criar um ecossistema duradouro, seguro e justo.</p>
 </section>
