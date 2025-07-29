@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +22,7 @@
             gap: 50px;
         }
         .logo {
-            width: 225px;
+            width: 150px;
             height: auto;
             display: block;
         }
@@ -51,6 +52,16 @@
             text-align: justify;
             margin-bottom: 24px;
         }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        .block {
+            flex: 1;
+            min-width: 300px;
+        }
         h2 {
             color: #1c2b3a;
             margin-top: 40px;
@@ -78,20 +89,17 @@
     </div>
 </header>
 
-<section>
-    <h2>Sobre a Zethera</h2>
-    <p>Zethera é uma rara espécie de borboleta asiática, símbolo de transformação silenciosa, leveza e resistência. Seu voo delicado esconde uma jornada de superação. Assim como ela, o projeto nasce de forma simples, mas com estrutura forte e planejada para resistir ao tempo, à especulação e aos ciclos do mercado.</p>
-
-    <h2>Contrato Inteligente – Segurança e Transparência</h2>
-    <p>A Zethera (QZR) foi desenvolvida na Binance Smart Chain (BEP-20), com código auditável e práticas avançadas de segurança.</p>
-    <p>O contrato segue padrões internacionais, incluindo funcionalidades como controle de liquidez, pausa de emergência e compatibilidade com carteiras populares.</p>
-
-    <h2>Tokenomics – Estrutura Econômica da Zethera</h2>
-    <p>A Zethera (QZR) possui um modelo econômico pensado para garantir estabilidade, segurança e crescimento sustentável.</p>
-    <p>O fornecimento total é limitado, com distribuição estratégica entre liquidez, desenvolvimento, incentivos e reserva de longo prazo.</p>
-
-    <h2>Visão e Propósito</h2>
-    <p>Zethera nasce como uma iniciativa independente, com base na descentralização e na inovação acessível. Nosso propósito é unir a estética, o simbolismo e a tecnologia para criar um ecossistema duradouro, seguro e justo.</p>
+<section class="flex">
+    <div class="block">
+        <h2>Contrato Inteligente – Segurança e Transparência</h2>
+        <p>A Zethera (QZR) foi desenvolvida na Binance Smart Chain (BEP-20), com código auditável e práticas avançadas de segurança.</p>
+        <p>O contrato segue padrões internacionais, incluindo funcionalidades como controle de liquidez, pausa de emergência e compatibilidade com carteiras populares.</p>
+    </div>
+    <div class="block">
+        <h2>Tokenomics – Estrutura Econômica da Zethera</h2>
+        <p>A Zethera (QZR) possui um modelo econômico pensado para garantir estabilidade, segurança e crescimento sustentável.</p>
+        <p>O fornecimento total é limitado, com distribuição estratégica entre liquidez, desenvolvimento, incentivos e reserva de longo prazo.</p>
+    </div>
 </section>
 
 <footer>
