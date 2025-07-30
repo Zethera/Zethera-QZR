@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zethera (QZR) - Criptomoeda da Borboleta Azul</title>
+    <meta name="description" content="Zethera é uma criptomoeda inspirada na rara borboleta asiática, símbolo de transformação e resistência. Desenvolvida na Binance Smart Chain com foco em segurança e transparência.">
+    <meta name="keywords" content="Zethera, QZR, criptomoeda, blockchain, Binance Smart Chain, BEP-20, borboleta azul">
+    <link rel="icon" type="image/x-icon" href="/Zethera-QZR/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #93c5fd;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #581c87, #1e40af);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content .description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badge {
+            background: #fbbf24;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-gray {
+            background: #f8fafc;
+        }
+
+        .section-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #6b7280;
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .emoji-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Images */
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .butterfly-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+        }
+
+        .coin-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer .logo {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Text colors for blue section */
+        .section-blue .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="/Zethera-QZR/assets/butterfly-original-hero-CESmmf97.png" alt="Zethera Logo">
+                <span>Zethera (QZR)</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Conectar Carteira</a>
+                <a href="#" class="btn btn-primary">Comprar QZR</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">🦋 Binance Smart Chain (BEP-20)</div>
+                
+                <h1>Zethera</h1>
+                <p class="subtitle">(QZR)</p>
+                
+                <p class="description">
+                    A criptomoeda inspirada na rara borboleta asiática, símbolo de 
+                    <strong>transformação silenciosa, leveza e resistência</strong>
+                </p>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de 
+                    longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas 
+                    com estrutura forte para resistir ao tempo.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Comprar QZR</a>
+                    <a href="#" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem;">Whitepaper</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div>Auditado</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">BEP-20</div>
+                        <div>Binance Smart Chain</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div>Fornecimento Limitado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section section-white">
+        <div class="container">
+            <div class="section-title">Sobre a Zethera</div>
+            <div class="section-subtitle">
+                Zethera é uma rara espécie de borboleta asiática, símbolo de transformação silenciosa, 
+                leveza e resistência. Seu voo delicado esconde uma jornada de superação.
+            </div>
+
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #2563eb;">
+                        🦋 Marca & Identidade
+                    </h3>
+                    <h4 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">
+                        Zethera: Mais que um Nome, um Conceito
+                    </h4>
+                    <p style="margin-bottom: 1.5rem; color: #6b7280;">
+                        Inspirada na rara borboleta asiática Zethera, a marca carrega o simbolismo da 
+                        transformação silenciosa, leveza estratégica e resiliência. A narrativa foi 
+                        integrada ao design, à arquitetura técnica e à identidade institucional da moeda.
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <strong>Design Exclusivo da Moeda:</strong>
+                        <span style="color: #6b7280;"> Identidade visual própria, com símbolo exclusivo e representação artística cunhada em modelos digitais tridimensionais.</span>
+                    </div>
+                    <div style="color: #2563eb; font-weight: 600;">
+                        Uma moeda com personalidade, distinta das demais.
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <img src="/Zethera-QZR/assets/butterfly-original-pot-apbBDpqG.png" alt="Zethera Butterfly" class="butterfly-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simbologia Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title">🧬 Simbologia do Projeto</div>
+            <div class="section-subtitle">Cada elemento do projeto carrega um significado:</div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon">Q</div>
+                    <h3>Energia</h3>
+                    <p>A força vital do ecossistema</p>
+                </div>
+                <div class="card">
+                    <div class="icon">Z</div>
+                    <h3>Identidade</h3>
+                    <p>O DNA do projeto, sua base</p>
+                </div>
+                <div class="card">
+                    <div class="icon">R</div>
+                    <h3>Raiz</h3>
+                    <p>Expansão, crescimento e conexão</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofia Section -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-title">🧭 Filosofia do Projeto</div>
+
+            <div class="grid grid-4">
+                <div style="text-align: center;">
+                    <div class="emoji-icon">💙</div>
+                    <h3 style="margin-bottom: 1rem;">Transformação Silenciosa</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">
+                        Como a borboleta Zethera, nosso projeto representa uma jornada de metamorfose e evolução constante.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="emoji-icon">🛡️</div>
+                    <h3 style="margin-bottom: 1rem;">Resistência</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">
+                        Estrutura forte e planejada para resistir ao tempo, à especulação e aos ciclos voláteis do mercado.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="emoji-icon">⚡</div>
+                    <h3 style="margin-bottom: 1rem;">Leveza</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">
+                        Interface simples e acessível, mas com tecnologia robusta por trás para garantir eficiência.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="emoji-icon">🎯</div>
+                    <h3 style="margin-bottom: 1rem;">Visão de Longo Prazo</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">
+                        Foco em crescimento sustentável e criação de valor duradouro para a comunidade.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-3" style="margin-top: 3rem;">
+                <div style="text-align: center;">
+                    <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Autenticidade</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Nada aqui foi copiado ou adaptado. Tudo é autoral.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Minimalismo Funcional</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Sem promessas exageradas. Apenas entrega sólida.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Controle Estratégico</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">O projeto foi construído com margem para ajustes táticos, conforme a jornada evolui.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posicionamento Section -->
+    <section class="section section-blue">
+        <div class="container">
+            <div class="section-title">🌐 Posicionamento & Estratégia</div>
+
+            <div class="grid grid-3">
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">Projeto 100% Concluído</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">
+                        Contrato ativo, distribuição feita, site publicado, whitepaper pronto e identidade definida. 
+                        QZR já nasce pronto para operação, liquidez ou aquisição estratégica.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">Disponível para Aquisição Integral</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">
+                        A Zethera pode ser incorporada por holdings, fundos ou projetos maiores com interesse em 
+                        absorver um criptoativo finalizado, com marca forte e base tecnológica pronta.
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="margin-bottom: 1rem;">Divulgação Seletiva</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem;">
+                        Por estratégia, o projeto segue em fase de divulgação controlada, priorizando negociações 
+                        com players que compreendam valor técnico e identitário de ativos digitais únicos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design da Moeda Section -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-title">💰 Design Exclusivo da Moeda Zethera</div>
+            <div style="text-align: center;">
+                <img src="/Zethera-QZR/assets/zethera-coin-animated-DqRzOzKc.gif" alt="Zethera Coin Animation" class="coin-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <img src="/Zethera-QZR/assets/butterfly-original-hero-CESmmf97.png" alt="Zethera Logo">
+                <span>Zethera (QZR)</span>
+            </div>
+            <p>A criptomoeda inspirada na rara borboleta asiática</p>
+            <div class="footer-buttons">
+                <a href="#" class="btn btn-outline">Ver no BSCScan</a>
+                <a href="#" class="btn btn-outline">Relatório de Auditoria</a>
+            </div>
+            <p style="color: #6b7280; font-size: 0.9rem;">
+                © 2024 Zethera. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
