@@ -8,15 +8,15 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg, #0d1b2a, #1b263b);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #0a1a3a, #123a7c);
       color: #ffffff;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #000c1a;
+      background-color: #0d1117;
       padding: 1rem 2rem;
     }
     .logo-area {
@@ -24,13 +24,13 @@
       align-items: center;
     }
     .logo-area img {
-      width: 40px;
-      height: 40px;
+      width: 34px;
+      height: 34px;
       margin-right: 10px;
     }
     .logo-area span {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: #ffffff;
     }
     nav a {
@@ -42,6 +42,26 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-right a {
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+    }
+    .btn-connect {
+      background: none;
+      border: 1px solid #3b82f6;
+      color: #ffffff;
+    }
+    .btn-buy {
+      background: #3b82f6;
+      color: #ffffff;
+    }
     .hero {
       text-align: center;
       padding: 5rem 2rem 3rem;
@@ -49,76 +69,82 @@
     .badge {
       display: inline-block;
       background-color: #1e1e1e;
-      color: #00ff99;
-      padding: 0.4rem 1rem;
+      color: #00ffcc;
+      padding: 0.4rem 1.2rem;
       border-radius: 30px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       margin-bottom: 1rem;
     }
     .hero h1 {
-      margin: 0.5rem 0;
-      font-size: 3rem;
-      color: #00ffe0;
+      margin: 0.3rem 0;
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #00e4f8;
     }
     .hero p.subtitle {
       font-size: 1.1rem;
-      color: #00ffbb;
+      color: #31f5b7;
       margin-top: 1rem;
-      font-weight: bold;
+      font-weight: 500;
     }
     .hero p.description {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #ccc;
-      max-width: 650px;
-      margin: 1.5rem auto 2rem;
+      max-width: 640px;
+      margin: 1.2rem auto 2rem;
     }
     .buttons a {
       display: inline-block;
       margin: 0 0.5rem;
-      padding: 0.8rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
+      font-size: 0.95rem;
     }
-    .btn-buy {
+    .btn-cta {
       background-color: #00b3ff;
-      color: #000;
+      color: #000000;
     }
-    .btn-whitepaper {
+    .btn-outline {
+      background-color: transparent;
       border: 1px solid #00b3ff;
       color: #00b3ff;
-      background-color: transparent;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-area">
-      <img src="images/borboleta-pote.png" alt="Logo Zethera" />
+      <img src="images/zethera-logo.png" alt="Logo Zethera" />
       <span>Zethera (QZR)</span>
     </div>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Distribuição</a>
-      <a href="#">Tecnologia</a>
-    </nav>
+    <div class="nav-right">
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Distribuição</a>
+        <a href="#">Tecnologia</a>
+      </nav>
+      <a href="#" class="btn-connect">Conectar Carteira</a>
+      <a href="#" class="btn-buy">Comprar QZR</a>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="badge">Binance Smart Chain (BEP-20)</div>
+    <div class="badge">🟦 Binance Smart Chain (BEP-20)</div>
     <h1>Zethera</h1>
     <h1>(QZR)</h1>
     <p class="subtitle">
       A criptomoeda inspirada na rara borboleta asiática, símbolo de
-      <span style="color:#00ffcc">transformação silenciosa, leveza e resistência</span>
+      <span style="color:#00ffbb; font-weight: bold">transformação silenciosa, leveza e resistência</span>
     </p>
     <p class="description">
       Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas com estrutura forte para resistir ao tempo.
     </p>
     <div class="buttons">
-      <a href="#" class="btn-buy">Comprar QZR</a>
-      <a href="#" class="btn-whitepaper">Whitepaper</a>
+      <a href="#" class="btn-cta">Comprar QZR</a>
+      <a href="#" class="btn-outline">Whitepaper</a>
     </div>
   </section>
 </body>
