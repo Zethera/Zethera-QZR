@@ -2,29 +2,40 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zethera (QZR)</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(180deg, #0d1b2a, #1b263b);
-      color: #fff;
+      color: #ffffff;
     }
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: #000c1a;
       padding: 1rem 2rem;
+    }
+    .logo-area {
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
-    header img {
-      width: 48px;
+    .logo-area img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo-area span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
     }
     nav a {
-      color: #fff;
-      margin: 0 1rem;
+      color: #ffffff;
+      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
     }
@@ -33,91 +44,58 @@
     }
     .hero {
       text-align: center;
-      padding: 4rem 2rem 2rem;
+      padding: 5rem 2rem 3rem;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #1e1e1e;
+      color: #00ff99;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
     .hero h1 {
-      font-size: 3rem;
       margin: 0.5rem 0;
-      color: #00ffd5;
+      font-size: 3rem;
+      color: #00ffe0;
     }
     .hero p.subtitle {
-      font-size: 1.2rem;
-      color: #00ffa2;
+      font-size: 1.1rem;
+      color: #00ffbb;
       margin-top: 1rem;
       font-weight: bold;
     }
     .hero p.description {
-      max-width: 700px;
-      margin: 1.5rem auto;
       font-size: 1rem;
-      color: #d0d0d0;
-    }
-    .buttons {
-      margin-top: 2rem;
+      color: #ccc;
+      max-width: 650px;
+      margin: 1.5rem auto 2rem;
     }
     .buttons a {
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
+      display: inline-block;
       margin: 0 0.5rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 8px;
       font-weight: bold;
-      display: inline-block;
+      text-decoration: none;
     }
-    .buy {
+    .btn-buy {
       background-color: #00b3ff;
       color: #000;
     }
-    .whitepaper {
-      background-color: transparent;
+    .btn-whitepaper {
       border: 1px solid #00b3ff;
       color: #00b3ff;
-    }
-    .badge {
-      background-color: #222;
-      color: #00ffd5;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #00ffd5;
-      border-bottom: 2px solid #00ffd5;
-      padding-bottom: 0.5rem;
-    }
-    .tokenomics-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    .tokenomics-table th, .tokenomics-table td {
-      border: 1px solid #555;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    .tokenomics-table th {
-      background-color: #222;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      font-size: 0.9rem;
-      color: #aaa;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display:flex; align-items:center">
-      <img src="images/zethera-logo.png" alt="Zethera Logo">
-      <span style="margin-left:10px; font-weight:bold; font-size:1.2rem;">Zethera (QZR)</span>
+    <div class="logo-area">
+      <img src="images/borboleta-pote.png" alt="Logo Zethera" />
+      <span>Zethera (QZR)</span>
     </div>
     <nav>
       <a href="#">Início</a>
@@ -131,39 +109,17 @@
     <div class="badge">Binance Smart Chain (BEP-20)</div>
     <h1>Zethera</h1>
     <h1>(QZR)</h1>
-    <p class="subtitle">A criptomoeda inspirada na rara borboleta asiática, símbolo de transformação silenciosa, leveza e resistência</p>
-    <p class="description">Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas com estrutura forte para resistir ao tempo.</p>
+    <p class="subtitle">
+      A criptomoeda inspirada na rara borboleta asiática, símbolo de
+      <span style="color:#00ffcc">transformação silenciosa, leveza e resistência</span>
+    </p>
+    <p class="description">
+      Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas com estrutura forte para resistir ao tempo.
+    </p>
     <div class="buttons">
-      <a href="#" class="buy">Comprar QZR</a>
-      <a href="#" class="whitepaper">Whitepaper</a>
+      <a href="#" class="btn-buy">Comprar QZR</a>
+      <a href="#" class="btn-whitepaper">Whitepaper</a>
     </div>
   </section>
-
-  <section>
-    <h2>Tokenomics</h2>
-    <table class="tokenomics-table">
-      <tr><th>Categoria</th><th>Distribuição</th><th>Quantidade</th><th>Valor Estimado</th></tr>
-      <tr><td>Venda pública inicial</td><td>35%</td><td>14.000.000.000 QZR</td><td>€7.000.000</td></tr>
-      <tr><td>Marketing & Parcerias</td><td>10%</td><td>3.500.000.000 QZR</td><td>€1.750.000</td></tr>
-      <tr><td>Liquidez (Exchanges)</td><td>5%</td><td>1.750.000.000 QZR</td><td>€875.000</td></tr>
-      <tr><td>Fundo de Desenvolvimento</td><td>7,5%</td><td>2.625.000.000 QZR</td><td>€1.312.500</td></tr>
-      <tr><td>Reserva Estratégica</td><td>7,5%</td><td>2.625.000.000 QZR</td><td>€1.312.500</td></tr>
-      <tr><td>Núcleo Fundacional</td><td>30%</td><td>10.500.000.000 QZR</td><td>€5.250.000</td></tr>
-    </table>
-
-    <h2>Contrato Verificado</h2>
-    <p>O token QZR está implementado na Binance Smart Chain com padrões BEP-20 e bibliotecas OpenZeppelin, garantindo segurança, auditabilidade e compatibilidade ampla.</p>
-
-    <h2>Links Oficiais</h2>
-    <ul>
-      <li>🌐 Site: <a href="https://zethera-qzr.com" style="color:#00ffd5">zethera-qzr.com</a></li>
-      <li>📄 Whitepaper: <a href="#" style="color:#00ffd5">(em breve)</a></li>
-      <li>🔍 BscScan: <a href="#" style="color:#00ffd5">(em breve)</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    Zethera (QZR) — Projeto experimental sem garantia de retorno financeiro. Use por sua conta e risco.
-  </footer>
 </body>
 </html>
