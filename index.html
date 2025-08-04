@@ -2,132 +2,129 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zethera (QZR)</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #0a1a3a, #123a7c);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #091940, #0b1e63);
       color: #ffffff;
     }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #0d1117;
+      background-color: #06142e;
       padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .logo-area {
+    .logo {
       display: flex;
       align-items: center;
     }
-    .logo-area img {
-      width: 34px;
-      height: 34px;
-      margin-right: 10px;
+    .logo img {
+      width: 40px;
     }
-    .logo-area span {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #ffffff;
+    .logo span {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-left: 10px;
     }
     nav a {
       color: #ffffff;
-      margin-left: 1.5rem;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: 500;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .nav-right {
+    .actions {
       display: flex;
-      align-items: center;
+      gap: 0.8rem;
     }
-    .nav-right a {
-      margin-left: 1rem;
+    .actions a {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 500;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
+      font-size: 0.9rem;
     }
-    .btn-connect {
-      background: none;
-      border: 1px solid #3b82f6;
-      color: #ffffff;
+    .connect {
+      background-color: #0d1e3a;
+      border: 1px solid #09c2ff;
+      color: #09c2ff;
     }
-    .btn-buy {
-      background: #3b82f6;
-      color: #ffffff;
+    .buytop {
+      background-color: #09c2ff;
+      color: #000;
     }
     .hero {
       text-align: center;
       padding: 5rem 2rem 3rem;
     }
-    .badge {
-      display: inline-block;
-      background-color: #1e1e1e;
-      color: #00ffcc;
-      padding: 0.4rem 1.2rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
     .hero h1 {
+      font-size: 3rem;
       margin: 0.3rem 0;
-      font-size: 2.8rem;
-      font-weight: bold;
-      color: #00e4f8;
+      color: #51f5ec;
     }
-    .hero p.subtitle {
+    .hero .subtitle {
       font-size: 1.1rem;
-      color: #31f5b7;
       margin-top: 1rem;
-      font-weight: 500;
+      color: #ffffff;
     }
-    .hero p.description {
-      font-size: 0.95rem;
-      color: #ccc;
-      max-width: 640px;
-      margin: 1.2rem auto 2rem;
+    .highlight {
+      color: #00ffbf;
+      font-weight: bold;
+    }
+    .description {
+      margin: 1.5rem auto 2rem;
+      max-width: 700px;
+      font-size: 1rem;
+      color: #d0d0d0;
     }
     .buttons a {
-      display: inline-block;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
       margin: 0 0.5rem;
-      padding: 0.75rem 1.5rem;
       border-radius: 8px;
       font-weight: bold;
-      text-decoration: none;
+      display: inline-block;
       font-size: 0.95rem;
     }
-    .btn-cta {
-      background-color: #00b3ff;
-      color: #000000;
+    .comprar {
+      background-color: #00bfff;
+      color: #000;
     }
-    .btn-outline {
+    .whitepaper {
       background-color: transparent;
-      border: 1px solid #00b3ff;
-      color: #00b3ff;
+      border: 1px solid #00bfff;
+      color: #00bfff;
+    }
+    .badge {
+      background-color: #141d3a;
+      color: #00ffc8;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-area">
-      <img src="images/zethera-logo.png" alt="Logo Zethera" />
+    <div class="logo">
+      <img src="images/zethera-logo.png" alt="Zethera Logo">
       <span>Zethera (QZR)</span>
     </div>
-    <div class="nav-right">
-      <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Distribuição</a>
-        <a href="#">Tecnologia</a>
-      </nav>
-      <a href="#" class="btn-connect">Conectar Carteira</a>
-      <a href="#" class="btn-buy">Comprar QZR</a>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Distribuição</a>
+      <a href="#">Tecnologia</a>
+    </nav>
+    <div class="actions">
+      <a href="#" class="connect">Conectar Carteira</a>
+      <a href="#" class="buytop">Comprar QZR</a>
     </div>
   </header>
 
@@ -136,15 +133,15 @@
     <h1>Zethera</h1>
     <h1>(QZR)</h1>
     <p class="subtitle">
-      A criptomoeda inspirada na rara borboleta asiática, símbolo de
-      <span style="color:#00ffbb; font-weight: bold">transformação silenciosa, leveza e resistência</span>
+      A criptomoeda inspirada na rara borboleta asiática, símbolo de 
+      <span class="highlight">transformação silenciosa, leveza e resistência</span>
     </p>
     <p class="description">
       Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas com estrutura forte para resistir ao tempo.
     </p>
     <div class="buttons">
-      <a href="#" class="btn-cta">Comprar QZR</a>
-      <a href="#" class="btn-outline">Whitepaper</a>
+      <a href="#" class="comprar">Comprar QZR</a>
+      <a href="#" class="whitepaper">Whitepaper</a>
     </div>
   </section>
 </body>
