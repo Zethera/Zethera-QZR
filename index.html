@@ -42,8 +42,9 @@
     }
     .hero p.subtitle {
       font-size: 1.2rem;
-      color: #b0f7d0;
+      color: #00ffa2;
       margin-top: 1rem;
+      font-weight: bold;
     }
     .hero p.description {
       max-width: 700px;
@@ -80,6 +81,36 @@
       display: inline-block;
       margin-bottom: 1rem;
     }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ffd5;
+      border-bottom: 2px solid #00ffd5;
+      padding-bottom: 0.5rem;
+    }
+    .tokenomics-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .tokenomics-table th, .tokenomics-table td {
+      border: 1px solid #555;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .tokenomics-table th {
+      background-color: #222;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -100,12 +131,39 @@
     <div class="badge">Binance Smart Chain (BEP-20)</div>
     <h1>Zethera</h1>
     <h1>(QZR)</h1>
-    <p class="subtitle">A criptomoeda inspirada na rara borboleta asiática, símbolo de <span style="color:#00ffa2; font-weight:bold">transformação silenciosa, leveza e resistência</span></p>
+    <p class="subtitle">A criptomoeda inspirada na rara borboleta asiática, símbolo de transformação silenciosa, leveza e resistência</p>
     <p class="description">Desenvolvida na Binance Smart Chain com foco em acessibilidade popular, visão de longo prazo e controle gradual de distribuição. Um projeto que nasce simples, mas com estrutura forte para resistir ao tempo.</p>
     <div class="buttons">
       <a href="#" class="buy">Comprar QZR</a>
       <a href="#" class="whitepaper">Whitepaper</a>
     </div>
   </section>
+
+  <section>
+    <h2>Tokenomics</h2>
+    <table class="tokenomics-table">
+      <tr><th>Categoria</th><th>Distribuição</th><th>Quantidade</th><th>Valor Estimado</th></tr>
+      <tr><td>Venda pública inicial</td><td>35%</td><td>14.000.000.000 QZR</td><td>€7.000.000</td></tr>
+      <tr><td>Marketing & Parcerias</td><td>10%</td><td>3.500.000.000 QZR</td><td>€1.750.000</td></tr>
+      <tr><td>Liquidez (Exchanges)</td><td>5%</td><td>1.750.000.000 QZR</td><td>€875.000</td></tr>
+      <tr><td>Fundo de Desenvolvimento</td><td>7,5%</td><td>2.625.000.000 QZR</td><td>€1.312.500</td></tr>
+      <tr><td>Reserva Estratégica</td><td>7,5%</td><td>2.625.000.000 QZR</td><td>€1.312.500</td></tr>
+      <tr><td>Núcleo Fundacional</td><td>30%</td><td>10.500.000.000 QZR</td><td>€5.250.000</td></tr>
+    </table>
+
+    <h2>Contrato Verificado</h2>
+    <p>O token QZR está implementado na Binance Smart Chain com padrões BEP-20 e bibliotecas OpenZeppelin, garantindo segurança, auditabilidade e compatibilidade ampla.</p>
+
+    <h2>Links Oficiais</h2>
+    <ul>
+      <li>🌐 Site: <a href="https://zethera-qzr.com" style="color:#00ffd5">zethera-qzr.com</a></li>
+      <li>📄 Whitepaper: <a href="#" style="color:#00ffd5">(em breve)</a></li>
+      <li>🔍 BscScan: <a href="#" style="color:#00ffd5">(em breve)</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    Zethera (QZR) — Projeto experimental sem garantia de retorno financeiro. Use por sua conta e risco.
+  </footer>
 </body>
 </html>
